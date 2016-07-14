@@ -228,7 +228,7 @@ function generatePackageJson (existing, results) {
     scripts: existing.scripts || (results.transpile
       ? {
         build: 'babel src --out-dir lib',
-        clean: 'rimraf lib',
+        clean: 'rm -rf lib',
         prepublish: 'npm run clean && npm run build'
       } : {}
     ),
